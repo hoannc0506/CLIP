@@ -44,7 +44,7 @@ def main():
     
     # define prompts
     prompts = [f"a photo of a {label}" for label in dataset.classes]
-    dataloader = torch.utils.data.DataLoader(dataset, batch_size=64, shuffle=False, collate_fn=data_collator)
+    dataloader = DataLoader(dataset, batch_size=64, shuffle=False, collate_fn=data_collator)
 
     # evaluating
     model.eval()
